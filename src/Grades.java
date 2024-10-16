@@ -42,29 +42,35 @@ public int round_up_grade(int grade){
     }
     return grade;
 }
-
+// ein Array mit die abgerundeten Noten liefern!!!!!!!!!
 public int[] rounded_up_grade(int[] grades){
-        int count=0;
-        for(int i=0; i<grades.length; i++){
-            if(grades[i]>=38) {
-                if (grades[i] % 5 == 3)
-                    count += 1;
-                if (grades[i] % 5 == 4)
-                    count+=1;
-            }
-        }
-        int[] rounded_up_grades=new int[count];
-        int counter=0;
+//        int count=0;
+//        for(int i=0; i<grades.length; i++){
+//            if(grades[i]>=38) {
+//                if (grades[i] % 5 == 3)
+//                    count += 1;
+//                if (grades[i] % 5 == 4)
+//                    count+=1;
+//            }
+//        }
+        int[] rounded_up_grades=new int[grades.length];
+        //int counter=0;
         for(int j=0; j<grades.length; j++){
             if(grades[j]>=38) {
                 if (grades[j] % 5 == 3) {
-                    rounded_up_grades[counter] = round_up_grade(grades[j]);
-                    counter += 1;
+                    rounded_up_grades[j] = round_up_grade(grades[j]);
+                    //counter += 1;
                 }
                 if (grades[j] % 5 == 4) {
-                    rounded_up_grades[counter] =  round_up_grade(grades[j]);
-                    counter += 1;
+                    rounded_up_grades[j] =  round_up_grade(grades[j]);
+                    //counter += 1;
                 }
+                if(grades[j]%5==1 || grades[j]%5==2){
+                    rounded_up_grades[j] =  grades[j];
+                }
+            }
+            else{
+                rounded_up_grades[j] = grades[j];
             }
 
         }

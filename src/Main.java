@@ -4,8 +4,8 @@ import java.util.Arrays;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Grades g = new Grades(new int[]{55, 45, 76, 23, 23, 79, 90,22,21});
-        System.out.println(Arrays.toString(g.bad_grades(g.grades)));
+        Grades g = new Grades(new int[]{29, 37, 38, 41, 84, 67});
+        System.out.println(Arrays.toString(g.bad_grades(g.rounded_up_grade(g.grades))));
         System.out.println(g.average_grade(g.grades));
         System.out.println(Arrays.toString(g.rounded_up_grade(g.grades)));
         System.out.println(g.max_rounded_up_grade(g.grades));
